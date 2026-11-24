@@ -1,0 +1,66 @@
+/* Liberation War Archive - style.css (custom styles on top of Bootstrap 5) */
+:root{--green:#0b4a3a;--green-2:#146b54;--red:#c8102e;--ink:#14201b;--paper:#eef1ec;--line:#cdd5cc}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:#fff}
+h1,h2,h3,h4,h5{font-weight:700}
+.ui,.navbar,.btn,.form-label,.badge,.breadcrumb,.topbar,.small,label,select,input,textarea,.table,dt,.alert{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--green-2)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.btn-green{background:var(--green);border-color:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-2);border-color:var(--green-2);color:#fff}
+.btn-outline-green{border-color:var(--green);color:var(--green)}
+.btn-outline-green:hover{background:var(--green);color:#fff}
+
+/* header top */
+.topbar{background:#08241c;color:#cfe0d8;font-size:.85rem}
+.topbar a{color:#cfe0d8;text-decoration:none}
+.topbar a:hover{color:#fff}
+
+/* navigation: full container width + hover effect */
+.main-nav{background:var(--green);padding:0}
+.main-nav .navbar-brand{color:#fff;display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-weight:700;font-size:1.3rem;margin-right:1.5rem}
+.dot{width:18px;height:18px;border-radius:50%;background:var(--red);display:inline-block}
+.main-nav .nav-link{color:#fff;font-weight:600;padding:1rem .9rem;text-align:center;transition:background .2s,color .2s}
+.main-nav .nav-link:hover{background:var(--red);color:#fff}
+.main-nav .nav-link.active{background:var(--green-2);box-shadow:inset 0 -3px 0 var(--red)}
+.main-nav .navbar-toggler{border-color:rgba(255,255,255,.6)}
+
+/* hero */
+.hero{background:linear-gradient(120deg,#08241c,var(--green) 60%,var(--green-2));color:#fff;padding:72px 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:50%;width:360px;height:360px;margin-top:-180px;border-radius:50%;background:var(--red);opacity:.9}
+.hero .container{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.05;max-width:16ch}
+.hero p{max-width:58ch;font-size:1.1rem}
+.fact{border-left:4px solid var(--red);padding-left:12px}
+.fact b{display:block;font-size:1.6rem;font-family:Georgia,serif}
+
+/* sections */
+.section{padding:56px 0}
+.section.alt{background:var(--paper)}
+.sec-title{margin-bottom:28px;border-bottom:2px solid var(--ink)}
+.sec-title h2{display:inline-block;margin:0;padding-bottom:6px;border-bottom:4px solid var(--red);margin-bottom:-2px}
+.card{border-color:var(--line);border-radius:4px}
+.card.lift{transition:transform .2s,box-shadow .2s}
+.card.lift:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(11,74,58,.14)}
+.tag{background:var(--green);color:#fff;font-weight:500;border-radius:2px}
+.stars{color:var(--red);letter-spacing:2px}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font:700 1.4rem system-ui,sans-serif;flex:none}
+audio,video{width:100%}
+.ph img{aspect-ratio:4/3;object-fit:cover;cursor:zoom-in}
+.zoom-box{overflow:hidden;background:#000;cursor:zoom-in;border-radius:4px}
+.zoom-box img{display:block;width:100%;transition:transform .15s;transform-origin:center}
+
+/* breadcrumb */
+.crumb{background:var(--paper);border-bottom:1px solid var(--line);padding:26px 0}
+.crumb h1{font-size:2rem;margin-bottom:6px}
+.crumb .breadcrumb{margin:0}
+
+/* footer */
+.big-footer{background:#08241c;color:#b8cbc2;padding:50px 0 20px}
+.big-footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
+.big-footer a{color:#b8cbc2;text-decoration:none}
+.big-footer a:hover{color:#fff}
+.big-footer ul{list-style:none;padding:0;margin:0}
+.big-footer li{margin-bottom:8px}
+.footer-bar{background:#04140f;color:#8aa196;text-align:center;padding:14px 0;font-size:.9rem;font-family:system-ui,sans-serif}
+@media (max-width:991px){.main-nav .nav-link{text-align:left}.hero::after{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
