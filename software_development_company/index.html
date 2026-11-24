@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | NexaCode Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="home" data-title="Home">
+<div id="site-header"></div>
+
+
+<main>
+<!-- Banner -->
+<div id="banner" class="carousel slide carousel-fade" data-bs-ride="carousel" aria-label="Featured highlights">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active"><div class="hero-slide"><img data-slide="0" alt=""><div class="shade"></div>
+      <div class="carousel-caption"><h2>Software that moves your business forward</h2><p>Websites, apps and custom systems built by a team that answers its phone.</p><a href="services.html" class="btn btn-accent btn-lg">Explore services</a></div></div></div>
+    <div class="carousel-item"><div class="hero-slide"><img data-slide="1" alt=""><div class="shade"></div>
+      <div class="carousel-caption"><h2>From idea to launch in weeks</h2><p>Agile sprints, weekly demos and no surprises on the invoice.</p><a href="projects.html" class="btn btn-accent btn-lg">See our projects</a></div></div></div>
+    <div class="carousel-item"><div class="hero-slide"><img data-slide="2" alt=""><div class="shade"></div>
+      <div class="carousel-caption"><h2>Design, build and scale with one team</h2><p>Tell us what you want to build and we will send a plan within two days.</p><a href="contact.html" class="btn btn-accent btn-lg">Contact us</a></div></div></div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+  <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+</div>
+
+<!-- Services -->
+<section class="section">
+  <div class="container">
+    <div class="section-title"><h2>Our Services</h2><p>Everything you need to plan, build and run your software.</p></div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card lift h-100"><div class="card-body"><div class="icon-box"><i class="bi bi-globe"></i></div><h3 class="h5">Web Development</h3><p class="text-secondary">Fast, secure and responsive websites and web apps, from company sites to full e-commerce.</p><a href="services.html">Learn more</a></div></div></div>
+      <div class="col-md-4"><div class="card lift h-100"><div class="card-body"><div class="icon-box"><i class="bi bi-phone"></i></div><h3 class="h5">Mobile App Development</h3><p class="text-secondary">Android and iOS apps from one codebase, tested on the devices your customers actually use.</p><a href="services.html">Learn more</a></div></div></div>
+      <div class="col-md-4"><div class="card lift h-100"><div class="card-body"><div class="icon-box"><i class="bi bi-palette"></i></div><h3 class="h5">UI/UX Design</h3><p class="text-secondary">Clear interfaces shaped by user research and checked with real prototypes before coding starts.</p><a href="services.html">Learn more</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured projects -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-title"><h2>Featured Projects</h2><p>A few recent builds from our portfolio.</p></div>
+    <div class="row g-4" id="featuredProjects"></div>
+    <div class="text-center mt-4"><a href="projects.html" class="btn btn-navy">View all projects</a></div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <div class="container">
+    <div class="section-title"><h2>What Clients Say</h2></div>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="card h-100"><div class="card-body"><div class="stars mb-2" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They understood our hospital workflow faster than we could explain it. The system went live on schedule and the staff picked it up in a day."</p><p class="mb-0 fw-semibold">Dr. Imran Chowdhury<span class="text-secondary fw-normal"> , City Care Hospital</span></p></div></div></div>
+      <div class="col-md-6"><div class="card h-100"><div class="card-body"><div class="stars mb-2" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Our app crashed on older phones before. NexaCode rebuilt it and our store rating went from 3.1 to 4.6."</p><p class="mb-0 fw-semibold">Mahbub Alam<span class="text-secondary fw-normal"> , FleetTrack Logistics</span></p></div></div></div>
+    </div>
+    <p class="text-center text-secondary small mt-3">Sample testimonials. Replace with real client feedback.</p>
+  </div>
+</section>
+
+<!-- Technology stack -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-title"><h2>Technology Stack</h2><p>Tools we use every day.</p></div>
+    <div class="row g-3 row-cols-3 row-cols-md-6 text-center">
+      <div class="col"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/react/react-original.svg" alt="">React</div></div>
+      <div class="col"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/laravel/laravel-plain.svg" alt="">Laravel</div></div>
+      <div class="col"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/nodejs/nodejs-original.svg" alt="">Node.js</div></div>
+      <div class="col"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/flutter/flutter-original.svg" alt="">Flutter</div></div>
+      <div class="col"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/mysql/mysql-original.svg" alt="">MySQL</div></div>
+      <div class="col"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/bootstrap/bootstrap-original.svg" alt="">Bootstrap</div></div>
+    </div>
+  </div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
