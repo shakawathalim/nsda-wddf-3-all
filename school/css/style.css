@@ -1,0 +1,76 @@
+/* Bright Future High School - style.css (custom styles on top of Bootstrap 5) */
+:root{--blue:#14377d;--blue-2:#1f4fae;--gold:#ffc533;--ink:#16213a;--soft:#f2f6fc;--line:#d9e2f1}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,h4,h5,.brand-name{font-family:Georgia,"Times New Roman",serif;font-weight:700}
+a{color:var(--blue-2)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn-blue{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-2);border-color:var(--blue-2);color:#fff}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:#16213a;font-weight:600}
+.btn-gold:hover{background:#e6ae1c;border-color:#e6ae1c;color:#16213a}
+
+/* header top */
+.topbar{background:#0b2150;color:#d3dcf0;font-size:.85rem}
+.topbar a{color:#d3dcf0;text-decoration:none}
+.topbar a:hover{color:var(--gold)}
+
+/* navigation: full container width + hover effect */
+.main-nav{background:var(--blue);padding:0}
+.main-nav .navbar-brand{color:#fff;display:flex;align-items:center;gap:10px;font-size:1.3rem;margin-right:1.5rem}
+.logo-mark{background:var(--gold);color:var(--blue);width:40px;height:40px;display:grid;place-items:center;font-size:1.3rem;border-radius:50%}
+.main-nav .nav-link{color:#fff;font-weight:600;padding:1rem .9rem;text-align:center;transition:background .2s,color .2s}
+.main-nav .nav-link:hover{background:var(--gold);color:var(--ink)}
+.main-nav .nav-link.active{background:var(--blue-2);box-shadow:inset 0 -3px 0 var(--gold)}
+.main-nav .navbar-toggler{border-color:rgba(255,255,255,.6)}
+
+/* banner */
+.hero-slide{position:relative;min-height:min(72vh,540px);background:var(--blue)}
+.hero-slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-slide .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,50,.82),rgba(8,20,50,.15))}
+.hero-slide .carousel-caption{position:absolute;inset:0;left:0;right:auto;bottom:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;padding:0 max(6vw,24px)}
+.hero-slide h2{font-size:clamp(1.9rem,5vw,3.4rem);max-width:16ch}
+.hero-slide p{font-size:1.15rem;max-width:46ch}
+
+/* sections */
+.section{padding:56px 0}
+.section.alt{background:var(--soft)}
+.sec-title{text-align:center;margin-bottom:32px}
+.sec-title h2{display:inline-block;padding-bottom:8px;border-bottom:4px solid var(--gold)}
+.sec-title p{color:#566384;margin:10px auto 0;max-width:56ch}
+.card{border-color:var(--line)}
+.card.lift{transition:transform .2s,box-shadow .2s}
+.card.lift:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(20,55,125,.14)}
+.icon-box{width:56px;height:56px;border-radius:12px;background:var(--blue);color:var(--gold);display:grid;place-items:center;font-size:1.6rem;margin-bottom:12px}
+.person{text-align:center}
+.person img{width:120px;height:120px;border-radius:50%;margin:20px auto 8px;display:block}
+.zoom-box{overflow:hidden;cursor:zoom-in;border:1px solid var(--line);border-radius:8px}
+.zoom-box img{display:block;width:100%;transition:transform .2s}
+.notice-box{max-height:360px;overflow:auto}
+.notice-date{min-width:68px;text-align:center;background:var(--blue);color:#fff;padding:6px 8px;line-height:1.15;border-radius:6px}
+.notice-date b{display:block;font-size:1.3rem}
+.quote{border-left:5px solid var(--gold);background:var(--soft);padding:22px 26px;font-family:Georgia,serif;font-size:1.1rem}
+.stars{color:#e0a100}
+.bar-bg{background:#e4eaf6;height:10px;border-radius:5px;overflow:hidden}
+.bar-fill{background:var(--blue-2);height:100%}
+.nav-tabs .nav-link{color:var(--blue)}
+.nav-tabs .nav-link.active{color:var(--ink);font-weight:600}
+.fb-slide{min-height:210px}
+.carousel-control-prev-icon,.carousel-control-next-icon{filter:invert(1)}
+
+/* breadcrumb */
+.crumb{background:var(--soft);border-bottom:1px solid var(--line);padding:26px 0}
+.crumb h1{font-size:2rem;margin-bottom:6px}
+.crumb .breadcrumb{margin:0}
+
+/* footer */
+.big-footer{background:#0b2150;color:#b9c6e2;padding:52px 0 20px}
+.big-footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
+.big-footer a{color:#b9c6e2;text-decoration:none}
+.big-footer a:hover{color:var(--gold)}
+.big-footer ul{list-style:none;padding:0;margin:0}
+.big-footer li{margin-bottom:8px}
+.social a{display:inline-grid;place-items:center;width:36px;height:36px;background:#1a3470;margin-right:6px;border-radius:50%}
+.social a:hover{background:var(--gold);color:var(--ink)}
+.footer-bar{background:#071538;color:#8d9bbd;text-align:center;padding:14px 0;font-size:.9rem}
+@media (max-width:991px){.main-nav .nav-link{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
