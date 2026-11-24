@@ -1,0 +1,76 @@
+/* Agricultural Information Hub - style.css (custom styles on top of Bootstrap 5) */
+:root{--field:#2f6b2f;--deep:#1b4520;--wheat:#d9a441;--wheat-2:#b8831f;--soil:#5c4033;--pale:#f3f7ec;--ink:#1d2a1d;--line:#d6e2cb}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,h4,h5,.brand-name{font-family:Georgia,"Times New Roman",serif;font-weight:700}
+a{color:var(--field)}
+:focus-visible{outline:3px solid var(--wheat);outline-offset:2px}
+.btn-field{background:var(--field);border-color:var(--field);color:#fff}
+.btn-field:hover{background:var(--deep);border-color:var(--deep);color:#fff}
+.btn-wheat{background:var(--wheat);border-color:var(--wheat);color:#1d2a1d;font-weight:600}
+.btn-wheat:hover{background:var(--wheat-2);border-color:var(--wheat-2);color:#fff}
+.btn-outline-field{border-color:var(--field);color:var(--field)}
+.btn-outline-field:hover{background:var(--field);color:#fff}
+
+/* header top */
+.topbar{background:var(--deep);color:#d3e6cc;font-size:.85rem}
+.topbar a{color:#d3e6cc;text-decoration:none}
+.topbar a:hover{color:#fff}
+
+/* navigation: full container width + hover effect */
+.main-nav{background:var(--field);padding:0}
+.main-nav .navbar-brand{color:#fff;display:flex;align-items:center;gap:10px;font-size:1.3rem;margin-right:1.5rem}
+.logo-mark{background:var(--wheat);color:var(--deep);width:38px;height:38px;border-radius:8px;display:grid;place-items:center;font-size:1.3rem}
+.main-nav .nav-link{color:#fff;font-weight:600;padding:1rem .9rem;text-align:center;transition:background .2s,color .2s}
+.main-nav .nav-link:hover{background:var(--wheat);color:var(--ink)}
+.main-nav .nav-link.active{background:var(--deep);box-shadow:inset 0 -3px 0 var(--wheat)}
+.main-nav .navbar-toggler{border-color:rgba(255,255,255,.6)}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--deep),var(--field) 65%,#4d8a2a);color:#fff;padding:70px 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;bottom:-120px;width:420px;height:420px;border-radius:50%;background:var(--wheat);opacity:.22}
+.hero .container{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.5rem);line-height:1.08;max-width:18ch}
+.hero p{max-width:60ch;font-size:1.1rem}
+.season-box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:14px 18px;max-width:560px}
+
+/* sections */
+.section{padding:56px 0}
+.section.alt{background:var(--pale)}
+.sec-title{text-align:center;margin-bottom:30px}
+.sec-title h2{display:inline-block;padding-bottom:8px;border-bottom:4px solid var(--wheat)}
+.sec-title p{color:#566a52;max-width:60ch;margin:10px auto 0}
+.card{border-color:var(--line)}
+.card.lift{transition:transform .2s,box-shadow .2s}
+.card.lift:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(27,69,32,.14)}
+.card-img-top{aspect-ratio:4/3;object-fit:cover}
+.tag{font-weight:500;border-radius:3px}
+.icon-box{width:52px;height:52px;border-radius:12px;background:var(--field);color:#fff;display:grid;place-items:center;font-size:1.5rem;margin-bottom:12px}
+.step-num{width:34px;height:34px;border-radius:50%;background:var(--wheat);color:var(--ink);display:inline-grid;place-items:center;font-weight:700;flex:none}
+
+/* breadcrumb */
+.crumb{background:var(--pale);border-bottom:1px solid var(--line);padding:26px 0}
+.crumb h1{font-size:2rem;margin-bottom:6px}
+.crumb .breadcrumb{margin:0}
+
+/* crops + pests */
+.nav-pills .nav-link{color:var(--field);font-weight:600}
+.nav-pills .nav-link.active{background:var(--field);color:#fff}
+.nutri th{width:50%;background:var(--pale)}
+.ipm{counter-reset:ipm}
+.ipm .card::before{counter-increment:ipm;content:counter(ipm);position:absolute;top:-14px;left:16px;background:var(--wheat);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:700}
+.ipm .card{position:relative;margin-top:14px}
+.check-list{list-style:none;padding:0;margin:0}
+.check-list li{padding:6px 0 6px 28px;position:relative}
+.check-list li::before{content:"\2713";position:absolute;left:0;color:var(--field);font-weight:700}
+.warn-box{border-left:5px solid var(--wheat-2);background:#fff8e6;padding:14px 18px}
+
+/* footer */
+.big-footer{background:var(--deep);color:#b8d2b0;padding:50px 0 20px}
+.big-footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
+.big-footer a{color:#b8d2b0;text-decoration:none}
+.big-footer a:hover{color:#fff}
+.big-footer ul{list-style:none;padding:0;margin:0}
+.big-footer li{margin-bottom:8px}
+.footer-bar{background:#10300f;color:#8fb286;text-align:center;padding:14px 0;font-size:.9rem}
+@media (max-width:991px){.main-nav .nav-link{text-align:left}.hero::after{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

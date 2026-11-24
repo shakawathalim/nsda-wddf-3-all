@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Farming guides, crop details and pest control strategies for farmers in Bangladesh.">
+<title>Contact | Agricultural Information Hub</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="contact">
+
+<!-- Header top -->
+<div class="topbar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2 py-2">
+    <div class="d-flex flex-wrap gap-3">
+      <a href="mailto:experts@agrihub.example"><i class="bi bi-envelope"></i> experts@agrihub.example</a>
+      <a href="tel:16123"><i class="bi bi-telephone"></i> Krishi Call Centre: 16123</a>
+    </div>
+    <span><i class="bi bi-clock"></i> <span id="dateTime"></span></span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg main-nav sticky-top" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand brand-name" href="index.html"><span class="logo-mark"><i class="bi bi-flower1"></i></span> AgriInfo Hub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="guides.html">Farming Guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="crops.html">Crop Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="pest-control.html">Pest Control</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<section class="crumb">
+  <div class="container">
+    <h1>Contact</h1>
+    <nav aria-label="breadcrumb"><ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    </ol></nav>
+  </div>
+</section>
+
+<main class="section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h2 class="h4 mb-2">Ask an agricultural expert</h2>
+        <p class="text-secondary">Describe your question. For crop problems, tell us the crop, growth stage and location, and attach a clear photo if you can.</p>
+        <form id="contactForm" class="row g-3 needs-validation" novalidate>
+          <div class="col-md-6"><label class="form-label" for="cName">Name</label><input id="cName" class="form-control" required autocomplete="name"><div class="invalid-feedback">Enter your name.</div></div>
+          <div class="col-md-6"><label class="form-label" for="cEmail">Email</label><input id="cEmail" type="email" class="form-control" required autocomplete="email"><div class="invalid-feedback">Enter a valid email address.</div></div>
+          <div class="col-12"><label class="form-label" for="cTopic">Subject / Expertise area</label>
+            <select id="cTopic" class="form-select" required>
+              <option value="">Choose an area</option><option>Crop selection and varieties</option><option>Soil and fertiliser</option><option>Pest and disease control</option><option>Irrigation and water management</option><option>Harvesting and storage</option><option>Organic farming</option><option>Other</option>
+            </select><div class="invalid-feedback">Choose the area of your question.</div></div>
+          <div class="col-12"><label class="form-label" for="cMessage">Your question</label><textarea id="cMessage" class="form-control" rows="5" minlength="15" required></textarea><div class="invalid-feedback">Write at least 15 characters.</div></div>
+          <div class="col-12"><label class="form-label" for="cFile">Attachment (optional)</label><input id="cFile" type="file" class="form-control" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"><div class="form-text">Photos or documents, up to 5 MB.</div><div class="invalid-feedback">This file is over 5 MB. Choose a smaller file.</div></div>
+          <div class="col-12"><button class="btn btn-field btn-lg" type="submit">Send inquiry</button></div>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4 mb-3">Agricultural extension services</h2>
+        <div class="card mb-3"><div class="card-body"><h3 class="h6"><i class="bi bi-telephone-fill text-success"></i> Krishi Call Centre: 16123</h3><p class="small mb-0">A government advisory line run by the Agriculture Information Service. Farmers can ask about crops, pests, diseases and fertiliser.</p></div></div>
+        <div class="card mb-3"><div class="card-body"><h3 class="h6"><i class="bi bi-geo-alt-fill text-success"></i> Your Upazila Agriculture Office</h3><p class="small mb-0">Your Upazila Agriculture Officer and the Sub-Assistant Agriculture Officer for your block (Department of Agricultural Extension) can visit your field.</p></div></div>
+        <div class="card mb-3"><div class="card-body"><h3 class="h6"><i class="bi bi-envelope-fill text-success"></i> Hub experts</h3><p class="small mb-0"><a href="mailto:experts@agrihub.example">experts@agrihub.example</a><br>Replies within two working days.</p></div></div>
+        <h3 class="h6 mt-4">Useful official websites (open in a new tab)</h3>
+        <ul class="check-list">
+          <li><a href="https://dae.gov.bd" target="_blank" rel="noopener noreferrer">Department of Agricultural Extension</a></li>
+          <li><a href="https://ais.gov.bd" target="_blank" rel="noopener noreferrer">Agriculture Information Service</a></li>
+          <li><a href="https://bari.gov.bd" target="_blank" rel="noopener noreferrer">Bangladesh Agricultural Research Institute</a></li>
+          <li><a href="https://brri.gov.bd" target="_blank" rel="noopener noreferrer">Bangladesh Rice Research Institute</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Confirmation popup -->
+<div class="modal fade" id="okModal" tabindex="-1" aria-labelledby="okTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header"><h2 class="modal-title h5" id="okTitle"><i class="bi bi-check-circle-fill text-success"></i> Inquiry sent</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body" id="okText"></div>
+    <div class="modal-footer"><a class="btn btn-outline-field" href="index.html">Back to Home</a><button type="button" class="btn btn-field" data-bs-dismiss="modal">OK</button></div>
+  </div></div>
+</div>
+
+<!-- Footer -->
+<footer class="big-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <h5>Agricultural Information Hub</h5>
+        <p>Practical farming guides, crop profiles and pest control strategies for farmers and agriculture enthusiasts, with a direct line to agricultural experts.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="guides.html">Farming Guides</a></li>
+          <li><a href="crops.html">Crop Details</a></li>
+          <li><a href="pest-control.html">Pest Control</a></li>
+          <li><a href="contact.html">Contact an Expert</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-4">
+        <h5>Get Help</h5>
+        <p class="mb-1"><i class="bi bi-telephone"></i> Krishi Call Centre: 16123</p>
+        <p class="mb-1"><i class="bi bi-envelope"></i> experts@agrihub.example</p>
+        <p class="mb-0 small">Your local Upazila agriculture office can also visit your field.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-bar">&copy; <span id="year"></span> Agricultural Information Hub. General guidance only. Sample content for demonstration.</div>
+
+<!-- Shared detail modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="mTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title h4" id="mTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body" id="mBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
