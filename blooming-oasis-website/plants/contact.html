@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Blooming Oasis</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="contact">
+
+<!-- Header top -->
+<div class="topbar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2 py-2">
+    <div class="d-flex flex-wrap gap-3">
+      <a href="mailto:hello@bloomingoasis.example"><i class="bi bi-envelope"></i> hello@bloomingoasis.example</a>
+      <a href="tel:+8801700000000"><i class="bi bi-telephone"></i> +880 1700-000000</a>
+    </div>
+    <span><i class="bi bi-clock"></i> <span id="dateTime"></span></span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg main-nav sticky-top" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand brand-name" href="index.html"><span class="logo-mark"><i class="bi bi-flower2"></i></span> Blooming Oasis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><button type="button" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><i class="bi bi-bag"></i> Cart <span class="badge text-bg-light" id="cartCount">0</span></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<section class="crumb">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <nav aria-label="breadcrumb"><ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+    </ol></nav>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Live chat -->
+        <div class="col-lg-6">
+          <h2 class="h4 mb-3">Chat with a Plant Specialist</h2>
+          <div class="chat">
+            <div class="chat-head"><span class="chat-dot" aria-hidden="true"></span><div><b>Mira, Plant Specialist</b><div class="small">Online now</div></div></div>
+            <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+            <div class="chat-foot">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <button type="button" class="btn btn-outline-leaf btn-sm" data-q="Why are my leaves turning yellow?">Yellow leaves</button>
+                <button type="button" class="btn btn-outline-leaf btn-sm" data-q="How often should I water my plant?">Watering</button>
+                <button type="button" class="btn btn-outline-leaf btn-sm" data-q="Which plants are safe for pets?">Pet-safe plants</button>
+              </div>
+              <form id="chatForm" class="input-group"><input id="chatInput" class="form-control" placeholder="Ask about your plant..." aria-label="Your message" autocomplete="off"><button class="btn btn-leaf" type="submit"><i class="bi bi-send"></i><span class="visually-hidden">Send</span></button></form>
+            </div>
+          </div>
+          <p class="small text-secondary mt-2">Demo chat: answers are automated. Connect a live chat service to reach real staff.</p>
+        </div>
+
+        <!-- Contact form -->
+        <div class="col-lg-6">
+          <h2 class="h4 mb-3">General inquiries</h2>
+          <p>Email us at <a href="mailto:hello@bloomingoasis.example">hello@bloomingoasis.example</a> or use the form below.</p>
+          <form id="contactForm" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6"><label class="form-label" for="cName">Name</label><input id="cName" class="form-control" required autocomplete="name"><div class="invalid-feedback">Enter your name.</div></div>
+            <div class="col-md-6"><label class="form-label" for="cEmail">Email</label><input id="cEmail" type="email" class="form-control" required autocomplete="email"><div class="invalid-feedback">Enter a valid email address.</div></div>
+            <div class="col-12"><label class="form-label" for="cSubject">Subject</label><input id="cSubject" class="form-control" required><div class="invalid-feedback">Enter a subject.</div></div>
+            <div class="col-12"><label class="form-label" for="cMessage">Message</label><textarea id="cMessage" class="form-control" rows="4" minlength="10" required></textarea><div class="invalid-feedback">Write at least 10 characters.</div></div>
+            <div class="col-12"><button class="btn btn-clay" type="submit">Send message</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social media -->
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-title"><h2>Follow our plant journey</h2><p>Care tips, new arrivals and a look behind the scenes at the nursery.</p></div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3"><div class="card lift social-card h-100"><div class="card-body"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><div class="icon-box"><i class="bi bi-instagram"></i></div><h3 class="h5">Instagram</h3></a><p class="small mb-0">Plant care tips every Tuesday and new-arrival reveals.</p></div></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="card lift social-card h-100"><div class="card-body"><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><div class="icon-box"><i class="bi bi-youtube"></i></div><h3 class="h5">YouTube</h3></a><p class="small mb-0">Behind-the-scenes nursery tours and repotting tutorials.</p></div></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="card lift social-card h-100"><div class="card-body"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><div class="icon-box"><i class="bi bi-facebook"></i></div><h3 class="h5">Facebook</h3></a><p class="small mb-0">Join our community group for plant swaps and Q&amp;A.</p></div></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="card lift social-card h-100"><div class="card-body"><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><div class="icon-box"><i class="bi bi-tiktok"></i></div><h3 class="h5">TikTok</h3></a><p class="small mb-0">Quick plant hacks and packing-day videos.</p></div></div></div>
+      </div>
+      <p class="small text-secondary text-center mt-3 mb-0">These links open each platform's home page in a new tab. Replace with your own profile links.</p>
+    </div>
+  </section>
+</main>
+
+<!-- Confirmation popup -->
+<div class="modal fade" id="okModal" tabindex="-1" aria-labelledby="okTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header"><h2 class="modal-title h5" id="okTitle"><i class="bi bi-check-circle-fill text-success"></i> Message sent</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body" id="okText"></div>
+    <div class="modal-footer"><a class="btn btn-outline-leaf" href="index.html">Back to Home</a><button type="button" class="btn btn-leaf" data-bs-dismiss="modal">OK</button></div>
+  </div></div>
+</div>
+
+<!-- Big footer -->
+<footer class="big-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <h5>Blooming Oasis</h5>
+        <p>Healthy houseplants, thoughtful care advice and plastic-free packaging, delivered across Bangladesh.</p>
+        <p class="mb-1"><i class="bi bi-geo-alt"></i> Agrabad Commercial Area, Chattogram, Bangladesh</p>
+        <p class="mb-0"><i class="bi bi-envelope"></i> hello@bloomingoasis.example</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-4">
+        <h5>Opening Hours</h5>
+        <ul>
+          <li>Saturday to Thursday: 10:00 AM to 8:00 PM</li>
+          <li>Friday: 3:00 PM to 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer -->
+<div class="footer-bar">&copy; <span id="year"></span> Blooming Oasis. All rights reserved. Sample content for demonstration.</div>
+
+<!-- Cart panel -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" aria-labelledby="cartTitle">
+  <div class="offcanvas-header"><h2 class="offcanvas-title h5" id="cartTitle">Your cart</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartBody"></div>
+    <div class="mt-auto pt-3">
+      <div class="d-flex justify-content-between fw-bold mb-3"><span>Total</span><span id="cartTotal">৳0</span></div>
+      <button type="button" class="btn btn-clay w-100 mb-2" id="checkoutBtn">Checkout</button>
+      <button type="button" class="btn btn-outline-secondary w-100" id="cartClear">Clear cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Message toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="appToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+    <div class="d-flex"><div class="toast-body" id="toastBody"></div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

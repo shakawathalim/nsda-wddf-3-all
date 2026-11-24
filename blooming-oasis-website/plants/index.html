@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Blooming Oasis</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="home">
+
+<!-- Header top -->
+<div class="topbar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2 py-2">
+    <div class="d-flex flex-wrap gap-3">
+      <a href="mailto:hello@bloomingoasis.example"><i class="bi bi-envelope"></i> hello@bloomingoasis.example</a>
+      <a href="tel:+8801700000000"><i class="bi bi-telephone"></i> +880 1700-000000</a>
+    </div>
+    <span><i class="bi bi-clock"></i> <span id="dateTime"></span></span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg main-nav sticky-top" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand brand-name" href="index.html"><span class="logo-mark"><i class="bi bi-flower2"></i></span> Blooming Oasis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><button type="button" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel"><i class="bi bi-bag"></i> Cart <span class="badge text-bg-light" id="cartCount">0</span></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero with plant collage -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <h1>Bring a little jungle indoors.</h1>
+        <p class="lead">Healthy, nursery-grown houseplants for every light level, every budget and every plant parent, from first-timers to collectors.</p>
+        <a href="#matchmaker" class="btn btn-clay btn-lg me-2">Find my plant</a>
+        <a href="product.html" class="btn btn-outline-leaf btn-lg">Shop Monstera</a>
+      </div>
+      <div class="col-lg-7"><div class="collage" id="collage"></div></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <!-- Plant Matchmaker -->
+  <section class="section" id="matchmaker">
+    <div class="container">
+      <div class="sec-title"><h2>Plant Matchmaker</h2><p>Answer three quick questions and we will suggest plants that suit your home.</p></div>
+      <form id="quizForm">
+        <div class="row g-3">
+          <div class="col-md-4"><fieldset class="quiz-q"><legend>1. How much sun does your room get?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="sun" id="s1" value="low"><label class="form-check-label" for="s1">Low: a dim corner or north-facing room</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="sun" id="s2" value="medium" checked><label class="form-check-label" for="s2">Medium: a few metres from a window</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="sun" id="s3" value="bright"><label class="form-check-label" for="s3">Bright: right by a sunny window</label></div></fieldset></div>
+          <div class="col-md-4"><fieldset class="quiz-q"><legend>2. How much care can you give?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="care" id="c1" value="1" checked><label class="form-check-label" for="c1">Beginner: easy plants only</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="care" id="c2" value="2"><label class="form-check-label" for="c2">Some effort: regular watering and checks</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="care" id="c3" value="3"><label class="form-check-label" for="c3">Plant pro: I enjoy a challenge</label></div></fieldset></div>
+          <div class="col-md-4"><fieldset class="quiz-q"><legend>3. Do you have pets?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="pet" id="p1" value="safe"><label class="form-check-label" for="p1">Yes, show pet-safe plants only</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="pet" id="p2" value="any" checked><label class="form-check-label" for="p2">No pets, show everything</label></div></fieldset></div>
+        </div>
+        <div class="text-center mt-4"><button class="btn btn-leaf btn-lg" type="submit">Match me with plants</button></div>
+      </form>
+      <div class="mt-4" id="quizOut" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Popular Houseplants -->
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-title"><h2>Popular Houseplants</h2><p>Our most-loved plants, ready to ship.</p></div>
+      <div class="row g-4" id="popular"></div>
+    </div>
+  </section>
+
+  <!-- Curated Collections -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-title"><h2>Curated Collections</h2><p>Themed plant sets that look good together and save you 10%.</p></div>
+      <div class="row g-4" id="sets"></div>
+    </div>
+  </section>
+
+  <!-- Collapsible membership -->
+  <section class="section alt">
+    <div class="container">
+      <button type="button" class="member-toggle" id="memberBtn" aria-expanded="false" aria-controls="memberPanel"><span><i class="bi bi-stars"></i> Join the Blooming Club</span><i class="bi bi-chevron-down chev"></i></button>
+      <div class="member-panel" id="memberPanel" aria-hidden="true">
+        <div class="member-inner">
+          <p>For ৳500 a year, plant lovers get these member benefits:</p>
+          <ul class="perk-list">
+            <li>10% off every order, all year</li>
+            <li>Free chat check-ins with our plant specialists</li>
+            <li>Early access to new and rare arrivals</li>
+            <li>Free replacement within 30 days if a plant arrives unhappy</li>
+            <li>Invitations to weekend repotting workshops</li>
+          </ul>
+          <button type="button" class="btn btn-clay mt-3" id="joinBtn">Join now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plant Care Guides -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-title"><h2>Plant Care Guides</h2><p>Short, practical advice to keep your plants thriving.</p></div>
+      <div class="row g-4" id="guides"></div>
+      <p class="text-center mt-4 mb-0">Want to read more? <a href="https://en.wikipedia.org/wiki/Houseplant" target="_blank" rel="noopener noreferrer">Learn about houseplants on Wikipedia (opens in a new tab)</a></p>
+    </div>
+  </section>
+
+  <!-- About Blooming Oasis -->
+  <section class="section alt">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2>About Blooming Oasis</h2>
+          <p>Blooming Oasis started on a Chattogram balcony with one monstera cutting and a lot of curiosity. Today we grow and ship healthy houseplants in plastic-free packaging, and we answer your care questions for as long as you own the plant.</p>
+          <a href="about.html" class="btn btn-leaf">Meet the team</a>
+        </div>
+        <div class="col-lg-6"><div class="row g-3 text-center">
+          <div class="col-4"><div class="display-6 fw-bold text-success">13</div><div class="small text-secondary">Plant varieties</div></div>
+          <div class="col-4"><div class="display-6 fw-bold text-success">100%</div><div class="small text-secondary">Plastic-free shipping boxes</div></div>
+          <div class="col-4"><div class="display-6 fw-bold text-success">30</div><div class="small text-secondary">Day happy-plant promise</div></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Big footer -->
+<footer class="big-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <h5>Blooming Oasis</h5>
+        <p>Healthy houseplants, thoughtful care advice and plastic-free packaging, delivered across Bangladesh.</p>
+        <p class="mb-1"><i class="bi bi-geo-alt"></i> Agrabad Commercial Area, Chattogram, Bangladesh</p>
+        <p class="mb-0"><i class="bi bi-envelope"></i> hello@bloomingoasis.example</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-4">
+        <h5>Opening Hours</h5>
+        <ul>
+          <li>Saturday to Thursday: 10:00 AM to 8:00 PM</li>
+          <li>Friday: 3:00 PM to 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer -->
+<div class="footer-bar">&copy; <span id="year"></span> Blooming Oasis. All rights reserved. Sample content for demonstration.</div>
+
+<!-- Cart panel -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" aria-labelledby="cartTitle">
+  <div class="offcanvas-header"><h2 class="offcanvas-title h5" id="cartTitle">Your cart</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartBody"></div>
+    <div class="mt-auto pt-3">
+      <div class="d-flex justify-content-between fw-bold mb-3"><span>Total</span><span id="cartTotal">৳0</span></div>
+      <button type="button" class="btn btn-clay w-100 mb-2" id="checkoutBtn">Checkout</button>
+      <button type="button" class="btn btn-outline-secondary w-100" id="cartClear">Clear cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Message toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="appToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+    <div class="d-flex"><div class="toast-body" id="toastBody"></div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
