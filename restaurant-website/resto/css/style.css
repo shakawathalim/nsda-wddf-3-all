@@ -1,0 +1,85 @@
+/* Saffron Table Restaurant - style.css (custom styles on top of Bootstrap 5) */
+:root{--wine:#6e1423;--wine-2:#8f1f33;--saffron:#e8a317;--ink:#231a16;--warm:#faf5ee;--line:#e6dccf}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,h4,h5,.brand-name{font-family:Georgia,"Times New Roman",serif;font-weight:700}
+a{color:var(--wine)}
+a:hover{color:var(--wine-2)}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:2px}
+.btn-wine{background:var(--wine);border-color:var(--wine);color:#fff}
+.btn-wine:hover{background:var(--wine-2);border-color:var(--wine-2);color:#fff}
+.btn-saffron{background:var(--saffron);border-color:var(--saffron);color:#231a16;font-weight:600}
+.btn-saffron:hover{background:#cf8f0c;border-color:#cf8f0c;color:#231a16}
+.btn-outline-wine{border-color:var(--wine);color:var(--wine)}
+.btn-outline-wine:hover{background:var(--wine);color:#fff}
+
+/* header top */
+.topbar{background:#1d1412;color:#d9cfc6;font-size:.85rem}
+.topbar a{color:#d9cfc6;text-decoration:none}
+.topbar a:hover{color:var(--saffron)}
+
+/* navigation: full container width + hover effect */
+.main-nav{background:var(--wine);padding:0}
+.main-nav .navbar-brand{color:#fff;display:flex;align-items:center;gap:10px;font-size:1.35rem;margin-right:1.5rem}
+.logo-mark{background:var(--saffron);color:#231a16;width:38px;height:38px;display:grid;place-items:center;font-size:1.2rem}
+.main-nav .nav-link{color:#fff;font-weight:600;padding:1rem .9rem;text-align:center;transition:background .2s,color .2s}
+.main-nav .nav-link:hover,.main-nav .nav-link.show{background:var(--saffron);color:#231a16}
+.main-nav .nav-link.active{background:var(--wine-2);box-shadow:inset 0 -3px 0 var(--saffron)}
+.main-nav .navbar-toggler{border-color:rgba(255,255,255,.6)}
+.main-nav .dropdown-menu{border-radius:0;border:0;border-top:3px solid var(--saffron);margin-top:0}
+.main-nav .dropdown-item:hover{background:var(--saffron)}
+@media (min-width:992px){.main-nav .dropdown:hover>.dropdown-menu{display:block}}
+
+/* banner */
+.hero-slide{position:relative;min-height:min(74vh,580px);background:#1d1412}
+.hero-slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-slide .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,8,.85),rgba(20,10,8,.2))}
+.hero-slide .carousel-caption{position:absolute;inset:0;left:0;right:auto;bottom:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;padding:0 max(6vw,24px)}
+.hero-slide h2{font-size:clamp(2rem,5.5vw,3.6rem);max-width:14ch}
+.hero-slide p{font-size:1.15rem;max-width:44ch}
+
+/* sections */
+.section{padding:60px 0}
+.section.warm{background:var(--warm)}
+.sec-title{text-align:center;margin-bottom:34px}
+.sec-title h2{display:inline-block;padding-bottom:8px;border-bottom:4px solid var(--saffron)}
+.sec-title p{color:#6b5d54;margin:10px auto 0;max-width:56ch}
+.dish-card{border-radius:0;border-color:var(--line);transition:transform .2s,box-shadow .2s}
+.dish-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(60,30,20,.14)}
+.dish-card .card-img-top{border-radius:0;aspect-ratio:4/3;object-fit:cover}
+.dish-card h3 a{text-decoration:none;color:var(--ink)}
+.dish-card h3 a:hover{color:var(--wine)}
+.price{font:700 1.2rem Georgia,serif;color:var(--wine)}
+.cat-badge{background:var(--saffron);color:#231a16;border-radius:0;font-weight:600}
+.chef{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);height:100%}
+.chef img{width:42%;aspect-ratio:1;object-fit:cover;flex:none}
+.chef div{padding:14px 14px 14px 0}
+.stars{color:var(--saffron);letter-spacing:2px}
+.news-band{background:linear-gradient(120deg,var(--wine),#3b0b15);color:#fff;padding:56px 0}
+
+/* breadcrumb */
+.crumb{background:var(--warm);border-bottom:1px solid var(--line);padding:26px 0}
+.crumb h1{font-size:2rem;margin-bottom:6px}
+.crumb .breadcrumb{margin:0}
+
+/* menu + detail */
+.accordion-button:not(.collapsed){background:#fff1d1;color:var(--ink)}
+.accordion-button:focus{box-shadow:0 0 0 .2rem rgba(232,163,23,.4)}
+.pagination .page-link{color:var(--wine);border-radius:0}
+.pagination .active .page-link{background:var(--wine);border-color:var(--wine);color:#fff}
+.zoom-box{overflow:hidden;cursor:zoom-in;border:1px solid var(--line);position:relative}
+.zoom-box img{display:block;width:100%;transition:transform .2s}
+.qty{max-width:150px}
+.qty input{text-align:center}
+
+/* footer */
+.big-footer{background:#1d1412;color:#c9bdb3;padding:52px 0 20px}
+.big-footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
+.big-footer a{color:#c9bdb3;text-decoration:none}
+.big-footer a:hover{color:var(--saffron)}
+.big-footer ul{list-style:none;padding:0;margin:0}
+.big-footer li{margin-bottom:8px}
+.social a{display:inline-grid;place-items:center;width:36px;height:36px;background:#33261f;margin-right:6px}
+.social a:hover{background:var(--saffron);color:#231a16}
+.footer-bar{background:#0f0a09;color:#8d8077;text-align:center;padding:14px 0;font-size:.9rem}
+@media (max-width:991px){.main-nav .nav-link{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
